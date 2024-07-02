@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+B:\ASL\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1060867037.index
+2840759253.index

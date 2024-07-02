@@ -1,0 +1,34 @@
+package in.dsa.string.simple;
+
+public class SubstringWithLen2 {
+
+public boolean isSubstringPresent(String s) {
+        
+        String rev = "";
+        String nv2 = "";
+        String nv1 = "";
+        
+        for(int j=s.length()-1; j>=0;j--){
+            char ch = s.charAt(j);
+            rev+=ch;
+         }
+
+        for(int i=0; i<s.length()-1; i++){
+
+         nv1 +=s.charAt(i) + s.charAt(i+1);
+
+         for(int j=0; j<rev.length()-1; j++){
+            nv2 +=rev.charAt(j) + rev.charAt(j+1);
+            if(nv1.equals(nv2)) return true;
+         
+         nv2 ="";
+         }
+         nv1="";
+         nv2="";
+        }
+
+        return false;
+
+
+    }
+}

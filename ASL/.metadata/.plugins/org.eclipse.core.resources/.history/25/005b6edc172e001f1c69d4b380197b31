@@ -1,0 +1,41 @@
+package in.dsa.string.simple;
+
+public class SubstringWithLen2 {
+
+public static void main(String[] args) {
+	
+	boolean f = isSubstringPresent("abcd");
+	System.out.println(f);
+}
+public static boolean isSubstringPresent(String s) {
+        
+        String rev = "";
+        String nv2 = "";
+        String nv1 = "";
+        
+        for(int j=s.length()-1; j>=0;j--){
+            char ch = s.charAt(j);
+            rev+=ch;
+         }
+    	//System.out.println(rev);
+
+        for(int i=0; i<s.length()-1; i++){
+
+         nv1 +=s.charAt(i) + s.charAt(i+1);
+         System.out.println("i ->"+nv1);
+         for(int j=0; j<rev.length()-1; j++){
+            nv2 +=rev.charAt(j) + rev.charAt(j+1);
+            System.out.println("j ->"+nv2);
+            if(nv1.equals(nv2)) return true;
+         
+         nv2 ="";
+         }
+         nv1="";
+         nv2="";
+        }
+
+        return false;
+
+
+    }
+}
